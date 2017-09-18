@@ -1,0 +1,12 @@
+int sum_list(List L){
+   return L?  L->value +sum_list(L->next):0;
+}
+
+
+
+void sum_list(Node *L,int *sum){
+     if(L!=NULL){
+       *sum+=L->value;
+       sum_list(L->value,sum)
+     }
+}
